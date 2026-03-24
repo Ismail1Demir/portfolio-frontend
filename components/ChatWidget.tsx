@@ -53,6 +53,7 @@ export default function ChatWidget() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 font-sans">
+      
       {/* 1. CHATT-FÖNSTRET */}
       {isOpen && (
         <div className="mb-4 w-80 md:w-96 h-[500px] bg-[#111] border border-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
@@ -115,15 +116,35 @@ export default function ChatWidget() {
         </div>
       )}
 
-      {/* 2. SJÄLVA BUBBLAN */}
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 active:scale-95 ${
-          isOpen ? "bg-gray-800 text-white rotate-90" : "bg-white text-black"
-        }`}
-      >
-        {isOpen ? "✕" : "💬"}
-      </button>
+      {/* 2. KNAPPEN & PRATBUBBLAN */}
+      <div className="relative flex items-center justify-end">
+        
+        {/* Pratbubblan (visas bara när chatten är stängd) */}
+        {!isOpen && (
+          <div 
+            onClick={() => setIsOpen(true)}
+            className="absolute right-20 bottom-2 bg-blue-600 text-white text-sm font-semibold px-4 py-3 rounded-2xl rounded-br-sm shadow-xl cursor-pointer hover:bg-blue-500 transition-colors flex items-center gap-2 whitespace-nowrap"
+          >
+            {/* Liten pulserande grön prick för att dra ögat till sig */}
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
+            </span>
+            Chatta med AI-Ismail 👋
+          </div>
+        )}
+
+        {/* Runda knappen */}
+        <button 
+          onClick={() => setIsOpen(!isOpen)}
+          className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 active:scale-95 z-10 relative ${
+            isOpen ? "bg-gray-800 text-white rotate-90" : "bg-white text-black"
+          }`}
+        >
+          {isOpen ? "✕" : "💬"}
+        </button>
+      </div>
+
     </div>
   );
 }
