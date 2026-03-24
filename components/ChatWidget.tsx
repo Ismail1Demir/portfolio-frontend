@@ -125,11 +125,6 @@ export default function ChatWidget() {
             onClick={() => setIsOpen(true)}
             className="absolute right-20 bottom-2 bg-blue-600 text-white text-sm font-semibold px-4 py-3 rounded-2xl rounded-br-sm shadow-xl cursor-pointer hover:bg-blue-500 transition-colors flex items-center gap-2 whitespace-nowrap"
           >
-            {/* Liten pulserande grön prick för att dra ögat till sig */}
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
-            </span>
             Chatta med AI-Ismail 👋
           </div>
         )}
