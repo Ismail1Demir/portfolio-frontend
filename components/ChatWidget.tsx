@@ -18,21 +18,34 @@ export default function ChatWidget() {
   const askAI = async () => {
     if (!query.trim()) return;
 
+    // Hämtar URL från Vercel-inställningarna, annars localhost
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
     const userMsg = query;
     setMessages((prev) => [...prev, { role: "user", content: userMsg }]);
     setQuery("");
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8000/chat", {
+      // Använder API_URL dynamiskt
+      const response = await fetch(`${API_URL}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMsg }),
       });
+      
+      if (!response.ok) {
+        throw new Error("Backend svarade inte korrekt");
+      }
+
       const data = await response.json();
       setMessages((prev) => [...prev, { role: "bot", content: data.answer }]);
     } catch (error) {
-      setMessages((prev) => [...prev, { role: "bot", content: "Kunde inte nå servern. Kontrollera att backenden körs!" }]);
+      console.error("Chat Error:", error);
+      setMessages((prev) => [
+        ...prev, 
+        { role: "bot", content: "Kunde inte nå servern. Kom ihåg att första frågan kan ta 15-20 sekunder när backenden vaknar!" }
+      ]);
     } finally {
       setLoading(false);
     }
@@ -40,7 +53,7 @@ export default function ChatWidget() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 font-sans">
-      {/* 1. CHATT-FÖNSTRET (Visas bara om isOpen är true) */}
+      {/* 1. CHATT-FÖNSTRET */}
       {isOpen && (
         <div className="mb-4 w-80 md:w-96 h-[500px] bg-[#111] border border-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
           
@@ -76,7 +89,7 @@ export default function ChatWidget() {
             {loading && (
               <div className="flex justify-start">
                 <div className="bg-gray-900 text-gray-400 p-3 rounded-2xl rounded-tl-none border border-gray-800 text-xs">
-                  Skriver...
+                  Tänker... (kan ta en stund vid första anropet)
                 </div>
               </div>
             )}
@@ -94,14 +107,15 @@ export default function ChatWidget() {
             <button 
               onClick={askAI} 
               className="bg-white text-black px-4 py-2 rounded-xl font-bold text-xs hover:bg-gray-200 transition-colors"
+              disabled={loading}
             >
-              Skicka
+              {loading ? "..." : "Skicka"}
             </button>
           </div>
         </div>
       )}
 
-      {/* 2. SJÄLVA BUBBLAN/KNAPPEN */}
+      {/* 2. SJÄLVA BUBBLAN */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 active:scale-95 ${
