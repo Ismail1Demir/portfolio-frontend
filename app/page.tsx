@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import ChatWidget from "@/components/ChatWidget";
 import { Mail, Phone, Award } from "lucide-react";
 
@@ -16,7 +17,7 @@ export default function Home() {
       educationTitle: "Utbildning",
       projectTitle: "Projekt",
       awardsTitle: "Utmärkelser",
-      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Medical AI", "RAG", "HTML", "CSS"],
+      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Transformers", "Pytorch", "Medical AI", "RAG", "HTML", "CSS", "MySQL", "PostgreSQL", "FastAPI"],
       experience: [
         {
           company: "Sigma Industry Solutions",
@@ -40,13 +41,13 @@ export default function Home() {
       education: [
         {
           school: "Technical University of Munich (TUM)",
-          degree: "Utbytestermin / Avancerade studier",
+          degree: "Utbytestermin / Avancerade studier / forskningsprojekt",
           date: "Okt 2025 - Mar 2026",
           desc: "Läste en extra termin utomlands efter kandidatexamen med fokus på avancerade kurser inom Machine Learning, AI in Medicine, Data Mining och Multimodal AI in Medicine. Var även aktivt delaktig i en forskningsgrupp."
         },
         {
           school: "Högskolan i Halmstad",
-          degree: "Kandidatexamen i Datateknik (Computer Science)",
+          degree: "Dataingenjör (Kandidatexamen i Datateknik)",
           date: "Aug 2022 - Jun 2025",
         }
       ],
@@ -61,14 +62,15 @@ export default function Home() {
           desc: "Utvecklade denna webbplats med en integrerad AI-assistent via npx create-next-app@latest. Frontend-delen är enkel eftersom det är mitt första Next.js-projekt och jag fortfarande lär mig ramverket. Projektets verkliga komplexitet och mitt huvudfokus ligger på RAG-systemet och backenden som driver chatbotten."
         },
         {
-          title: "Learning from Time: Lung Cancer Risk Prediction (TUM)",
+          title: "Learning from Time: Longitudinal and Anatomy-Aware Models for Lung Cancer Risk Prediction (TUM)",
           tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers"],
           desc: "Projektet fokuserade på att utveckla modeller för att prediktera lungcancerrisk över 6 års tid med hjälp av verkliga medicinska dataset och deep learning metoder, bland annat transformer-baserade modeller. I projektet hade jag en aktiv roll och arbetade med modellutveckling, analys av medicinsk data, diverse tester på modellen samt visualisering av den slutgiltiga modellen."
         },
         {
-          title: "AI-Based Detection & Classification of Prostate Cancer (Högskolan i Halmstad)",
+          title: "AI-Based Detection & Classification of Prostate Cancer (Högskolan i Halmstad och Sahlgrenska Universitetssjukhuset)",
           tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Bachelor's Thesis"],
-          desc: "Mitt examensarbete handlade om att utveckla en AI-modell för detektion av prostatacancer baserad på medicinska bilddata. Arbetet belönades med två stipendier för bästa examensarbete, vilket speglar kvaliteten på mitt arbete. I samband med projektet utvecklade jag även en applikation för att visualisera modellens beslutsprocess."
+          desc: "Mitt examensarbete handlade om att utveckla en AI-modell för detektion av prostatacancer baserad på medicinska bilddata. Arbetet belönades med två stipendier för bästa examensarbete, vilket speglar kvaliteten på mitt arbete. I samband med projektet utvecklade jag även en applikation för att visualisera modellens beslutsprocess.",
+          image: "/images/prostate-cam.png"
         },
         {
           title: "Smart Home & Real-time Micro-Kernel (Högskolan i Halmstad)",
@@ -84,7 +86,7 @@ export default function Home() {
     },
     en: {
       title: "Ismail Demir",
-      sub: "Computer Engineer | Software & AI Engineer",
+      sub: "Computer Science Engineer | Software & AI Engineer",
       desc: "Newly graduated Computer Engineer with a strong passion for software development and AI. To me, technological advancement is a train I never want to get off, I am driven by constantly learning and evolving.\n\nI am a curious, fast learner who loves solving complex problems through smart, data-driven solutions that make a real difference.",
       skillsTitle: "Technical Skills",
       experienceTitle: "Experience",
@@ -115,13 +117,13 @@ export default function Home() {
       education: [
         {
           school: "Technical University of Munich (TUM)",
-          degree: "Exchange Semester / Advanced Studies",
+          degree: "Exchange Semester / Advanced Studies / research project",
           date: "Oct 2025 - Mar 2026",
           desc: "Completed an extra semester abroad after my bachelor's degree, focusing on advanced courses in Machine Learning, AI in Medicine, Data Mining, and Multimodal AI in Medicine. Also actively participated in a research group."
         },
         {
           school: "Halmstad University",
-          degree: "Bachelor's Degree in Computer Science",
+          degree: "Bachelor of Science in Computer Engineering",
           date: "Aug 2022 - Jun 2025",
         }
       ],
@@ -136,14 +138,15 @@ export default function Home() {
           desc: "Developed this website with an integrated AI assistant using npx create-next-app@latest. The frontend is simple because it's my first Next.js project and I am still learning the framework. The true complexity and my main focus lie in the RAG system and the backend powering the chatbot."
         },
         {
-          title: "Learning from Time: Lung Cancer Risk Prediction (TUM)",
+          title: "Learning from Time: Longitudinal and Anatomy-Aware Models for Lung Cancer Risk Prediction (TUM)",
           tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers"],
           desc: "The project focused on developing models to predict lung cancer risk over a 6-year period using real-world medical datasets and deep learning methods, including transformer-based models. I took an active role in the project, working with model development, analysis of medical data, various model testing, and visualization of the final model."
         },
         {
-          title: "AI-Based Detection & Classification of Prostate Cancer (Halmstad University)",
+          title: "AI-Based Detection & Classification of Prostate Cancer (Halmstad University and Sahlgrenska University Hospital)",
           tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Bachelor's Thesis"],
-          desc: "My bachelor's thesis involved developing an AI model for the detection of prostate cancer based on medical imaging data. The work was awarded two scholarships for the best thesis, reflecting the quality of my work. In connection with the project, I also developed an application to visualize the model's decision-making process."
+          desc: "My bachelor's thesis involved developing an AI model for the detection of prostate cancer based on medical imaging data. The work was awarded two scholarships for the best thesis, reflecting the quality of my work. In connection with the project, I also developed an application to visualize the model's decision-making process.",
+          image: "/images/prostate-cam.png"
         },
         {
           title: "Smart Home & Real-time Micro-Kernel (Halmstad University)",
@@ -179,13 +182,12 @@ export default function Home() {
         <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">{t.title}</h1>
         <p className="text-xl md:text-2xl text-blue-500 font-medium mb-6">{t.sub}</p>
         
-        {/* Lade till 'whitespace-pre-line' för att radbrytningarna (\n\n) ska fungera */}
         <p className="text-sm md:text-base text-gray-400 max-w-2xl leading-relaxed mb-8 whitespace-pre-line">
           {t.desc}
         </p>
         
         {/* Kontakt-blocken i mitten */}
-        <div className="flex flex-wrap justify-center gap-4 text-sm font-medium">
+        <div className="flex flex-wrap justify-center gap-4 text-sm font-medium mb-10">
           <a href="mailto:ismdem654@hotmail.com" className="flex items-center gap-2 bg-[#111] border border-gray-800 px-4 py-2 rounded-lg hover:border-gray-500 transition-colors">
             <Mail size={16} className="text-gray-400" /> ismdem654@hotmail.com
           </a>
@@ -199,6 +201,19 @@ export default function Home() {
             </svg>
             GITHUB
           </a>
+        </div>
+
+        {/* Utmärkelser placerade under länkarna, sida vid sida */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-3xl">
+          {t.awards.map((award, i) => (
+            <div key={i} className="flex-1 flex items-center gap-4 bg-[#0a0a0a] border border-gray-800 p-4 rounded-xl shadow-sm hover:border-gray-600 transition-colors text-left">
+              <Award size={28} className="text-yellow-600 shrink-0"/>
+              <div>
+                <span className="block font-bold text-sm text-gray-200 leading-tight mb-1">{award.title}</span>
+                <span className="text-xs text-gray-500">{award.org}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </header>
 
@@ -260,34 +275,29 @@ export default function Home() {
                 <h3 className="font-bold text-xl mb-4 text-white">{proj.title}</h3>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {proj.tech.map((t, index) => (
+                  {proj.tech.map((techItem, index) => (
                     <span key={index} className="px-2.5 py-1 bg-black border border-gray-800 rounded-md text-[10px] text-gray-400 uppercase tracking-widest font-bold">
-                      {t}
+                      {techItem}
                     </span>
                   ))}
                 </div>
                 
                 <p className="text-sm text-gray-400 leading-relaxed">{proj.desc}</p>
+                
+                {/* BILDEN RENDERAS HÄR OM DEN FINNS I OBJEKTET */}
+                {(proj as any).image && (
+                  <div className="mt-6 rounded-lg overflow-hidden border border-gray-800">
+                    <Image 
+                      src={(proj as any).image} 
+                      alt={proj.title} 
+                      width={800} 
+                      height={400} 
+                      className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                )}
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Awards - Block */}
-        <section>
-          <h2 className="text-sm font-bold mb-6 uppercase tracking-widest text-gray-500 border-b border-gray-800 pb-2">{t.awardsTitle}</h2>
-          <div className="bg-[#0f0f0f] border border-gray-800 p-6 md:p-8 rounded-2xl">
-            <ul className="space-y-6">
-              {t.awards.map((award, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <Award size={24} className="text-yellow-600 mt-0.5 shrink-0"/>
-                  <div>
-                    <span className="block font-bold text-base text-gray-200 mb-1">{award.title}</span>
-                    <span className="text-sm text-gray-500">{award.org}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 
