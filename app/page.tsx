@@ -17,7 +17,7 @@ export default function Home() {
       educationTitle: "Utbildning",
       projectTitle: "Projekt",
       awardsTitle: "Utmärkelser",
-      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Transformers", "Pytorch", "Medical AI", "RAG", "HTML", "CSS", "MySQL", "PostgreSQL", "FastAPI"],
+      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Transformers", "Pytorch", "Medical AI", "RAG", "HTML", "CSS", "MySQL", "PostgreSQL", "FastAPI", "Git", "Docker", "GitHub", "Slurm"],
       experience: [
         {
           company: "Sigma Industry Solutions",
@@ -63,8 +63,8 @@ export default function Home() {
         },
         {
           title: "Learning from Time: Longitudinal and Anatomy-Aware Models for Lung Cancer Risk Prediction (TUM)",
-          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers"],
-          desc: "Projektet fokuserade på att utveckla modeller för att prediktera lungcancerrisk över 6 års tid med hjälp av verkliga medicinska dataset och deep learning metoder, bland annat transformer-baserade modeller. I projektet hade jag en aktiv roll och arbetade med modellutveckling, analys av medicinsk data, diverse tester på modellen samt visualisering av den slutgiltiga modellen."
+          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers", "Scrum"],
+          desc: "Genomförde ett maskininlärningsprojekt vid Chair of AI in Healthcare and Medicine, Technical University of Munich. Utvecklade en longitudinell och anatomi-medveten modell med Python och PyTorch för att prediktera lungcancerrisk över en 6-årsperiod. Kombinerade temporal medicinsk data med anatomiska bildegenskaper med hjälp av transformer-baserade arkitekturer för att fånga upp långsiktiga sjukdomsmönster och förbättra träffsäkerheten för tidig riskbedömning, samtidigt som arbetet bedrevs i en agil Scrum-miljö."
         },
         {
           title: "AI-Based Detection & Classification of Prostate Cancer (Högskolan i Halmstad och Sahlgrenska Universitetssjukhuset)",
@@ -79,8 +79,12 @@ export default function Home() {
         },
         {
           title: "Game Development (Högskolan i Halmstad)",
-          tech: ["Java", "OOP"],
-          desc: "Utvecklade spelen SameGame och Bomberman med starkt fokus på spelmekanik och objektorienterad programmering."
+          tech: ["Java", "OOP", "MVC", "JUnit"],
+          desc: "Utvecklade två Java-spel, SameGame och Bomberman, med starkt fokus på objektorienterad programmering, mjukvarudesign och underhållbar kod. Byggde ett delat ramverk med hjälp av MVC-arkitektur för att förbättra modularitet, återanvändning av kod och skalbarhet. Arbetade även med JUnit-testning, strukturerad inmatningshantering och applikationslogik, vilket stärkte mina Java-kunskaper och mitt intresse för backend-utveckling.",
+          videos: [
+            { src: "/videos/Bomberman.mp4", label: "Bomberman" },
+            { src: "/videos/Samegame.mp4", label: "SameGame" }
+          ]
         }
       ]
     },
@@ -139,8 +143,8 @@ export default function Home() {
         },
         {
           title: "Learning from Time: Longitudinal and Anatomy-Aware Models for Lung Cancer Risk Prediction (TUM)",
-          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers"],
-          desc: "The project focused on developing models to predict lung cancer risk over a 6-year period using real-world medical datasets and deep learning methods, including transformer-based models. I took an active role in the project, working with model development, analysis of medical data, various model testing, and visualization of the final model."
+          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers", "Scrum"],
+          desc: "Conducted a machine learning project at the Chair of AI in Healthcare and Medicine, Technical University of Munich. Developed a longitudinal and anatomy-aware model using Python and PyTorch to predict lung cancer risk over a 6-year period. Combined temporal medical data with anatomical imaging features using transformer-based architectures to capture long-term disease patterns and improve early risk prediction accuracy, while also working in an agile Scrum environment."
         },
         {
           title: "AI-Based Detection & Classification of Prostate Cancer (Halmstad University and Sahlgrenska University Hospital)",
@@ -155,8 +159,12 @@ export default function Home() {
         },
         {
           title: "Game Development (Halmstad University)",
-          tech: ["Java", "OOP"],
-          desc: "Developed the games SameGame and Bomberman, focusing on gameplay mechanics and object-oriented programming."
+          tech: ["Java", "OOP", "MVC", "JUnit"],
+          desc: "Developed two Java games, SameGame and Bomberman, with a strong focus on object-oriented programming, software design, and maintainable code. Built a shared framework using MVC architecture to improve modularity, code reuse, and scalability. Also worked with JUnit testing, structured input handling, and application logic, which strengthened my Java skills and interest in backend development.",
+          videos: [
+            { src: "/videos/Bomberman.mp4", label: "Bomberman" },
+            { src: "/videos/Samegame.mp4", label: "SameGame" }
+          ]
         }
       ]
     }
@@ -294,6 +302,28 @@ export default function Home() {
                       height={400} 
                       className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
                     />
+                  </div>
+                )}
+                {/* VIDEOS RENDERAS HÄR SIDA VID SIDA */}
+                {(proj as any).videos && (
+                  <div className="mt-6 grid grid-cols-2 gap-4">
+                    {(proj as any).videos.map((video: any, idx: number) => (
+                      <div key={idx} className="flex flex-col space-y-2">
+                        <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold ml-1">
+                          {video.label}
+                        </span>
+                        <div className="rounded-lg overflow-hidden border border-gray-800 bg-black flex-1 flex">
+                          <video 
+                            src={video.src}
+                            controls
+                            muted
+                            loop
+                            playsInline
+                            className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>
