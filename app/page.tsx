@@ -17,7 +17,7 @@ export default function Home() {
       educationTitle: "Utbildning",
       projectTitle: "Projekt",
       awardsTitle: "Utmärkelser",
-      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Transformers", "Pytorch", "Medical AI", "RAG", "HTML", "CSS", "MySQL", "PostgreSQL", "FastAPI", "Git", "Docker", "GitHub", "Slurm"],
+      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Neural Networks", "Transformers", "Pytorch", "Medical AI", "RAG", "HTML", "CSS", "MySQL", "PostgreSQL", "FastAPI", "Git", "GitHub", "GitLab", "Docker", "Slurm", "Scrum", "Spring Boot", "JUnit"],
       experience: [
         {
           company: "Sigma Industry Solutions",
@@ -29,7 +29,7 @@ export default function Home() {
           company: "Godishuset",
           role: "Operations Manager (Familjeföretag)",
           date: "Apr 2019 - Aug 2025",
-          desc: "Översåg daglig butiksdrift och schemaläggning. Hanterade företagets databas och lagersystem, samt bidrog till utvecklingen av webbplatsen för att förbättra företagets närvaro online."
+          desc: "Ansvarade för daglig butiksdrift och schemaläggning. Ledde ett team på 2–3 anställda och införde operativa arbetsflöden som förbättrade effektiviteten. Hanterade företagets databas, designade ett lagersystem för inköpsstöd och bidrog till utvecklingen av webbplatsen."
         },
         {
           company: "Kriminalvården",
@@ -63,19 +63,27 @@ export default function Home() {
         },
         {
           title: "Learning from Time: Longitudinal and Anatomy-Aware Models for Lung Cancer Risk Prediction (TUM)",
-          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers", "Scrum"],
+          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers", "Deep Learning", "Scrum"],
           desc: "Genomförde ett maskininlärningsprojekt vid Chair of AI in Healthcare and Medicine, Technical University of Munich. Utvecklade en longitudinell och anatomi-medveten modell med Python och PyTorch för att prediktera lungcancerrisk över en 6-årsperiod. Kombinerade temporal medicinsk data med anatomiska bildegenskaper med hjälp av transformer-baserade arkitekturer för att fånga upp långsiktiga sjukdomsmönster och förbättra träffsäkerheten för tidig riskbedömning, samtidigt som arbetet bedrevs i en agil Scrum-miljö."
         },
         {
+          title: "Inventory Management System",
+          tech: ["Java", "Spring Boot", "Docker", "PostgreSQL"],
+          desc: "Utvecklade ett lagerhanteringssystem för Godishuset för att spåra lagernivåer och stödja inköpsbeslut. Systemet visar lagertillgänglighet i realtid och genererar varningar för artiklar som behöver beställas om.",
+          images: ["/images/inventory1.png", "/images/inventory2.png"]
+        },
+        
+        {
           title: "AI-Based Detection & Classification of Prostate Cancer (Högskolan i Halmstad och Sahlgrenska Universitetssjukhuset)",
-          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Bachelor's Thesis"],
+          tech: ["Python", "PyTorch", "AI", "Deep Learning", "CNN", "Medical Imaging", "Bachelor's Thesis"],
           desc: "Mitt examensarbete handlade om att utveckla en AI-modell för detektion av prostatacancer baserad på medicinska bilddata. Arbetet belönades med två stipendier för bästa examensarbete, vilket speglar kvaliteten på mitt arbete. I samband med projektet utvecklade jag även en applikation för att visualisera modellens beslutsprocess.",
           image: "/images/prostate-cam.png"
         },
         {
-          title: "Smart Home & Real-time Micro-Kernel (Högskolan i Halmstad)",
-          tech: ["C++", "Arduino"],
-          desc: "Utveckling av system för realtidsövervakning och schemaläggning i inbyggda system."
+          title: "Bowling Game Simulator",
+          tech: ["Java", "Swing", "JUnit"],
+          desc: "Utvecklade en bowlingsimulator i Java med separerad spellogik och GUI-komponenter. Implementerade poängräkning, hantering av omgångar (frames) och ett grafiskt gränssnitt, samt skrev JUnit-tester för att verifiera spelets beteende och poängregler. Projektet stärkte mina färdigheter inom Java, objektorienterad programmering och strukturerad applikationsdesign.",
+          image: "/images/bowling.png"
         },
         {
           title: "Game Development (Högskolan i Halmstad)",
@@ -85,6 +93,16 @@ export default function Home() {
             { src: "/videos/Bomberman.mp4", label: "Bomberman" },
             { src: "/videos/Samegame.mp4", label: "SameGame" }
           ]
+        },
+        {
+          title: "Real-Time Microkernel (Högskolan i Halmstad)",
+          tech: ["C++", "Embedded Systems", "ARM Cortex"],
+          desc: "Utvecklade en realtids-mikrokärna i mjukvara för ARM Cortex (Arduino Due). Implementerade uppgiftsschemaläggning (task scheduling) och processhantering för inbyggda system."
+        },
+        {
+          title: "Smart Home Project (Högskolan i Halmstad)",
+          tech: ["C++", "Arduino", "Linked Lists", "Embedded Systems"],
+          desc: "Utvecklade ett smart hemsystem med Arduino innehållande realtidsövervakning av temperatur, ett dynamiskt 7-dagars dataloggningssystem med länkade listor (Linked Lists) och SysTick-baserad tidsstämpling. Implementerade även ett automatiserat, solspårande rullgardinssystem med servomotorer, samt ett konfigurerbart temperaturlarm via ett interaktivt gränssnitt med LCD och knappsats där dagliga min-, max- och medelvärden presenterades."
         }
       ]
     },
@@ -109,7 +127,7 @@ export default function Home() {
           company: "Godishuset",
           role: "Operations Manager (Family Business)",
           date: "Apr 2019 - Aug 2025",
-          desc: "Oversaw daily store operations and staff scheduling, managed the company's database and inventory system, and contributed to the development of the company website to improve its future online presence."
+          desc: "Oversaw daily store operations and staff scheduling. Led a small team of 2-3 staff, introducing operational workflows that improved consistency. Designed and implemented an inventory management system to track stock levels and support purchasing decisions."
         },
         {
           company: "Kriminalvården",
@@ -143,19 +161,26 @@ export default function Home() {
         },
         {
           title: "Learning from Time: Longitudinal and Anatomy-Aware Models for Lung Cancer Risk Prediction (TUM)",
-          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers", "Scrum"],
+          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers", "Deep Learning", "Scrum"],
           desc: "Conducted a machine learning project at the Chair of AI in Healthcare and Medicine, Technical University of Munich. Developed a longitudinal and anatomy-aware model using Python and PyTorch to predict lung cancer risk over a 6-year period. Combined temporal medical data with anatomical imaging features using transformer-based architectures to capture long-term disease patterns and improve early risk prediction accuracy, while also working in an agile Scrum environment."
         },
         {
+        title: "Inventory Management System",
+        tech: ["Java", "Spring Boot", "Docker", "PostgreSQL"],
+        desc: "Developed an inventory management system for Godishuset to track stock levels and support candy purchasing decisions. Implemented functionality to display real-time stock availability and reorder alerts.",
+        images: ["/images/inventory1.png", "/images/inventory2.png"]
+        },
+        {
           title: "AI-Based Detection & Classification of Prostate Cancer (Halmstad University and Sahlgrenska University Hospital)",
-          tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Bachelor's Thesis"],
+          tech: ["Python", "PyTorch", "AI", "Deep Learning", "CNN", "Medical Imaging", "Bachelor's Thesis"],
           desc: "My bachelor's thesis involved developing an AI model for the detection of prostate cancer based on medical imaging data. The work was awarded two scholarships for the best thesis, reflecting the quality of my work. In connection with the project, I also developed an application to visualize the model's decision-making process.",
           image: "/images/prostate-cam.png"
         },
         {
-          title: "Smart Home & Real-time Micro-Kernel (Halmstad University)",
-          tech: ["C++", "Arduino"],
-          desc: "Development of real-time monitoring and scheduling systems for embedded devices."
+          title: "Bowling Game Simulator",
+          tech: ["Java", "Swing", "JUnit"],
+          desc: "Developed a bowling game simulator in Java with separate game logic and GUI components. Implemented scoring logic, frame handling, and a graphical interface, and wrote JUnit tests to verify game behavior and scoring rules. The project strengthened my skills in Java, object-oriented programming, and structured application design.",
+          image: "/images/bowling.png"
         },
         {
           title: "Game Development (Halmstad University)",
@@ -165,6 +190,16 @@ export default function Home() {
             { src: "/videos/Bomberman.mp4", label: "Bomberman" },
             { src: "/videos/Samegame.mp4", label: "SameGame" }
           ]
+        },
+        {
+          title: "Real-Time Microkernel (Halmstad University)",
+          tech: ["C++", "Embedded Systems", "ARM Cortex"],
+          desc: "Developed a real-time microkernel in software on an ARM Cortex processor (Arduino Due). Implemented core functionalities including task scheduling and process management for embedded devices."
+        },
+        {
+          title: "Smart Home Project (Halmstad University)",
+          tech: ["C++", "Arduino", "Linked Lists", "Embedded Systems"],
+          desc: "Developed a smart home system using Arduino featuring real-time temperature monitoring, a dynamic 7-day data logging system using Linked Lists, and custom SysTick-based timestamping. Implemented an automated sun-tracking shading system using a servo motor, alongside a configurable temperature alarm and a keypad/LCD interface to interact with the system and display daily minimum, maximum, and average metrics."
         }
       ]
     }
@@ -292,7 +327,7 @@ export default function Home() {
                 
                 <p className="text-sm text-gray-400 leading-relaxed">{proj.desc}</p>
                 
-                {/* BILDEN RENDERAS HÄR OM DEN FINNS I OBJEKTET */}
+                {/* BILDEN RENDERAS HÄR OM DEN FINNS I OBJEKTET (Enstaka bild) */}
                 {(proj as any).image && (
                   <div className="mt-6 rounded-lg overflow-hidden border border-gray-800">
                     <Image 
@@ -302,6 +337,23 @@ export default function Home() {
                       height={400} 
                       className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
                     />
+                  </div>
+                )}
+
+                {/* NYTT: RENDERAR FLERA BILDER SIDA VID SIDA */}
+                {(proj as any).images && (
+                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {(proj as any).images.map((img: string, idx: number) => (
+                      <div key={idx} className="rounded-lg overflow-hidden border border-gray-800 bg-black">
+                        <Image 
+                          src={img} 
+                          alt={`${proj.title} ${idx}`} 
+                          width={400} 
+                          height={300} 
+                          className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity"
+                        />
+                      </div>
+                    ))}
                   </div>
                 )}
                 {/* VIDEOS RENDERAS HÄR SIDA VID SIDA */}
