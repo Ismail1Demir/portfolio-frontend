@@ -17,13 +17,19 @@ export default function Home() {
       educationTitle: "Utbildning",
       projectTitle: "Projekt",
       awardsTitle: "Utmärkelser",
-      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Neural Networks", "Transformers", "Pytorch", "Medical AI", "RAG", "HTML", "CSS", "MySQL", "PostgreSQL", "FastAPI", "Git", "GitHub", "GitLab", "Docker", "Slurm", "Scrum", "Spring Boot", "JUnit"],
+      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Neural Networks", "Transformers", "Pytorch", "Medical AI", "RAG", "AWS", "Docker", "HTML", "CSS", "MySQL", "PostgreSQL", "FastAPI", "Git", "GitHub", "GitLab", "Slurm", "Scrum", "Spring Boot", "JUnit"],
       experience: [
         {
           company: "Sigma Industry Solutions",
           role: "Internship",
           date: "Sep 2024 - Jan 2025",
           desc: "Utvecklade ett objektorienterat databassystem i C# och SQL för att spåra projektobjekt, samt ett webbgränssnitt i ASP.NET Core MVC."
+        },
+        {
+          company: "Västerviks kommun",
+          role: "Internship, IT-enheten",
+          date: "Jun 2024 - Aug 2024",
+          desc: "Arbetade med IT-supportärenden och utvecklade ett Python-script för att preprocessa och gruppera tickets inför framtida AI-baserad klassificering."
         },
         {
           company: "Godishuset",
@@ -52,6 +58,7 @@ export default function Home() {
         }
       ],
       awards: [
+        { title: "AWS Certified Cloud Practitioner", org: "Amazon Web Services" },
         { title: "Best Thesis in Health Innovation", org: "Getinge Sterilization AB" },
         { title: "Best Thesis in Innovation", org: "Leap for Life" }
       ],
@@ -115,13 +122,19 @@ export default function Home() {
       educationTitle: "Education",
       projectTitle: "Projects",
       awardsTitle: "Awards",
-      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Medical AI", "RAG", "HTML", "CSS"],
+      skills: ["Python", "C#", "SQL", "Java", "C++", "Machine Learning", "Deep Learning", "Neural Networks", "Transformers", "PyTorch", "Medical AI", "RAG", "AWS", "Docker", "HTML", "CSS", "MySQL", "PostgreSQL", "FastAPI", "Git", "GitHub", "GitLab", "Slurm", "Scrum", "Spring Boot", "JUnit"],
       experience: [
         {
           company: "Sigma Industry Solutions",
           role: "Internship",
           date: "Sep 2024 - Jan 2025",
           desc: "Developed an object-oriented database system in C# and SQL, and a web interface using ASP.NET Core MVC."
+        },
+        {
+          company: "Västerviks kommun",
+          role: "Internship, IT Unit",
+          date: "Jun 2024 - Aug 2024",
+          desc: "Worked with IT support tickets and developed a Python script to preprocess and group tickets for future AI-based classification."
         },
         {
           company: "Godishuset",
@@ -150,6 +163,7 @@ export default function Home() {
         }
       ],
       awards: [
+        { title: "AWS Certified Cloud Practitioner", org: "Amazon Web Services" },
         { title: "Best Thesis in Health Innovation", org: "Getinge Sterilization AB" },
         { title: "Best Thesis in Innovation", org: "Leap for Life" }
       ],
