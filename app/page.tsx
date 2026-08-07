@@ -55,6 +55,7 @@ export default function Home() {
           school: "Högskolan i Halmstad",
           degree: "Dataingenjör (Kandidatexamen i Datateknik)",
           date: "Aug 2022 - Jun 2025",
+          desc: "Erhöll betyget 5 för kandidatuppsatsen och tilldelades två stipendier för den. Under min utbildning på dataingenjörsprogrammet tyckte jag att programmeringskurserna var mest intressanta och relevanta, särskilt programmering, avancerad objektorienterad programmering, algoritmer och datastrukturer, programmering av distribuerade system samt datasäkerhet för inbyggda system. Jag tyckte även att kurser inom databaser och matematik var värdefulla. Tillsammans gav dessa kurser mig en stark grund, där Java var det huvudsakliga programmeringsspråket genom hela utbildningen."
         }
       ],
       awards: [
@@ -69,6 +70,11 @@ export default function Home() {
           desc: "Utvecklade denna webbplats med en integrerad AI-assistent via npx create-next-app@latest. Frontend-delen är enkel eftersom det är mitt första Next.js-projekt och jag fortfarande lär mig ramverket. Projektets verkliga komplexitet och mitt huvudfokus ligger på RAG-systemet och backenden som driver chatbotten."
         },
         {
+          title: "Task Management Microservices System",
+          tech: ["Java", "Spring Boot", "Microservices", "ActiveMQ", "JMS", "PostgreSQL", "Docker", "REST API"],
+          desc: "Byggde ett aktivitetshanteringssystem (task management) baserat på en Spring Boot-mikrotjänstarkitektur. Systemet består av en Task Manager-tjänst som exponerar ett REST API och lagrar uppgifter i PostgreSQL, samt en Notification Service som hanterar och schemalägger påminnelser. Tjänsterna är löst kopplade och kommunicerar asynkront via JMS och ActiveMQ. Task Manager-tjänsten skickar påminnelseuppgifter till en kö med hjälp av en JSON-meddelandekonverterare, som Notification Service sedan konsumerar och lagrar i sin egen oberoende PostgreSQL-databas."
+        },
+        {
           title: "Learning from Time: Longitudinal and Anatomy-Aware Models for Lung Cancer Risk Prediction (TUM)",
           tech: ["Python", "PyTorch", "AI", "Medical Imaging", "Transformers", "Deep Learning", "Scrum"],
           desc: "Genomförde ett maskininlärningsprojekt vid Chair of AI in Healthcare and Medicine, Technical University of Munich. Utvecklade en longitudinell och anatomi-medveten modell med Python och PyTorch för att prediktera lungcancerrisk över en 6-årsperiod. Kombinerade temporal medicinsk data med anatomiska bildegenskaper med hjälp av transformer-baserade arkitekturer för att fånga upp långsiktiga sjukdomsmönster och förbättra träffsäkerheten för tidig riskbedömning, samtidigt som arbetet bedrevs i en agil Scrum-miljö."
@@ -79,7 +85,6 @@ export default function Home() {
           desc: "Utvecklade ett lagerhanteringssystem för Godishuset för att spåra lagernivåer och stödja inköpsbeslut. Systemet visar lagertillgänglighet i realtid och genererar varningar för artiklar som behöver beställas om.",
           images: ["/images/inventory1.png", "/images/inventory2.png"]
         },
-        
         {
           title: "AI-Based Detection & Classification of Prostate Cancer (Högskolan i Halmstad och Sahlgrenska Universitetssjukhuset)",
           tech: ["Python", "PyTorch", "AI", "Deep Learning", "CNN", "Medical Imaging", "Bachelor's Thesis"],
@@ -160,6 +165,7 @@ export default function Home() {
           school: "Halmstad University",
           degree: "Bachelor of Science in Computer Engineering",
           date: "Aug 2022 - Jun 2025",
+          desc: "Received a grade of 5 for my bachelor's thesis and was awarded two scholarships for it. During my studies in the Computer Engineering program, I found the programming courses to be the most interesting and relevant, particularly programming, advanced object-oriented programming, algorithms and data structures, programming of distributed systems, and data security for embedded systems. I also found courses in databases and mathematics to be valuable. Together, these courses gave me a strong foundation, with Java being the primary programming language throughout the education."
         }
       ],
       awards: [
@@ -172,6 +178,11 @@ export default function Home() {
           title: "AI-driven Portfolio & RAG Chatbot",
           tech: ["Python", "RAG", "FastAPI", "Next.js"],
           desc: "Developed this website with an integrated AI assistant using npx create-next-app@latest. The frontend is simple because it's my first Next.js project and I am still learning the framework. The true complexity and my main focus lie in the RAG system and the backend powering the chatbot."
+        },
+        {
+          title: "Task Management Microservices System",
+          tech: ["Java", "Spring Boot", "Microservices", "ActiveMQ", "JMS", "PostgreSQL", "Docker", "REST API"],
+          desc: "Built a task management system utilizing a Spring Boot microservices architecture. The system consists of a Task Manager service that exposes a REST API and stores tasks in PostgreSQL, and a Notification Service that manages and schedules due reminders. The services are heavily decoupled and communicate asynchronously via JMS and ActiveMQ. The Task Manager sends reminder tasks using a JSON message converter to a queue, which the Notification Service then consumes and stores in its own independent PostgreSQL database."
         },
         {
           title: "Learning from Time: Longitudinal and Anatomy-Aware Models for Lung Cancer Risk Prediction (TUM)",
