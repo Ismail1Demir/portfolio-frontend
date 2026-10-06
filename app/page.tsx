@@ -25,12 +25,7 @@ export default function Home() {
           date: "Sep 2024 - Jan 2025",
           desc: "Utvecklade ett objektorienterat databassystem i C# och SQL för att spåra projektobjekt, samt ett webbgränssnitt i ASP.NET Core MVC."
         },
-        {
-          company: "Västerviks kommun",
-          role: "Internship, IT-enheten",
-          date: "Jun 2024 - Aug 2024",
-          desc: "Arbetade med IT-supportärenden och utvecklade ett Python-script för att preprocessa och gruppera tickets inför framtida AI-baserad klassificering."
-        },
+      
         {
           company: "Godishuset",
           role: "Operations Manager (Familjeföretag)",
@@ -135,12 +130,7 @@ export default function Home() {
           date: "Sep 2024 - Jan 2025",
           desc: "Developed an object-oriented database system in C# and SQL, and a web interface using ASP.NET Core MVC."
         },
-        {
-          company: "Västerviks kommun",
-          role: "Internship, IT Unit",
-          date: "Jun 2024 - Aug 2024",
-          desc: "Worked with IT support tickets and developed a Python script to preprocess and group tickets for future AI-based classification."
-        },
+        
         {
           company: "Godishuset",
           role: "Operations Manager (Family Business)",
